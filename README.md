@@ -1,4 +1,4 @@
-# NodeJS SocketIo FullDuplex
+# NodeJS Socket.io(FullDuplex)
 NodeJS comandando conexão full duplex com socket.io no servior e na pagina html com JavaScript puro.
 
 Arquivos importantes:
@@ -6,7 +6,7 @@ Arquivos importantes:
 	- server.js
 	- index.html
 
-###### server.js
+## server.js
 
 Servidor node.js onde uso as bibliotécas:
 
@@ -56,7 +56,7 @@ Nesta função io.on('connection', (socket)=>{...} é onde o socket fica ouvindo
 manipular as mensagens de forma individual e enviar a resposta para o cliente com o método emit. Para mais detalhes sobre
 socket.io acesse o site https://socket.io/get-started/chat/.
 
-###### index.html
+## index.html
 
 No lado do cliente procurei usar JavaScript puro para demonstrar o poder nativo de socket.io.
 
