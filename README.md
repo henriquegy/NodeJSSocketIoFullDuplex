@@ -16,12 +16,12 @@ const http = require('http').createServer(app)
 const io = require('socket.io')(http)
 ```
 
-Express - Já é bem conhecido, mas, para quem não conhece essa biblioteca é responsavel por encapsular rotas e outras vantagens de
+[Express](https://expressjs.com/pt-br/4x/api.html) - Já é bem conhecido, mas, para quem não conhece essa biblioteca é responsavel por encapsular rotas e outras vantagens de
 um servidor http.
 
-Http - Essa bibliotéca é nescessária para que a socket.io funcione corretamente.
+[Http](https://nodejs.org/api/http.html) - Essa bibliotéca é nescessária para que a socket.io funcione corretamente.
 
-Socket.io - por fim a socket.io que encapsua http para conseguir fazer a conexão Full-Duplex com o arquivo html.
+[Socket.io](https://socket.io/get-started/chat/) - por fim a socket.io que encapsua http para conseguir fazer a conexão Full-Duplex com o arquivo html.
 
 ```javascript
 app.get('/', (req, resp)=>{
