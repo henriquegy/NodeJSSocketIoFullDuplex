@@ -6,7 +6,7 @@ Arquivos importantes:
 	- server.js
 	- index.html
 
-######server.js
+###### server.js
 
 Servidor node.js onde uso as bibliotécas:
 
@@ -21,7 +21,7 @@ Http - Essa bibliotéca é nescessária para que a socket.io funcione corretamen
 
 Socket.io - por fim a socket.io que encapsua http para conseguir fazer a conexão fullduplex com o arquivo html.
 
-```
+```javascript
 app.get('/', (req, resp)=>{
 	resp.sendFile(__dirname + '/index.html')
 })
@@ -29,7 +29,7 @@ app.get('/', (req, resp)=>{
 
 Serve o arquivo index.html na requisição da url no browser.
 
-```
+```javascript
 http.listen(1023, function(){
 	console.log('Listening port 1023');
 })
@@ -38,7 +38,7 @@ http.listen(1023, function(){
 Notem que uso app da biblioteca express para encapsular o verbo http GET, e para camar o servidor é usado a própria bibliotéca
 http. Http só vai server como o inicializador do servidor e como base para Express e Socket.io.
 
-```
+```javascript
 io.on('connection', (socket)=>{
 	console.log('New conn id: ', socket.id);
 
@@ -56,12 +56,12 @@ Nesta função io.on('connection', (socket)=>{...} é onde o socket fica ouvindo
 manipular as mensagens de forma individual e enviar a resposta para o cliente com o método emit. Para mais detalhes sobre
 socket.io acesse o site https://socket.io/get-started/chat/.
 
-######index.html
+###### index.html
 
 No lado do cliente procurei usar JavaScript puro para demonstrar o poder nativo de socket.io.
 
-```
-<script src="/socket.io/socket.io.js"></script>
+```javascript
+        <script src="/socket.io/socket.io.js"></script>
 	<script>
 		const socket = io();
 
@@ -88,4 +88,4 @@ No lado do cliente procurei usar JavaScript puro para demonstrar o poder nativo 
   
   É isso ai, espero ter ajudado a clarear o caminho para entender a api do [socket.io](https://socket.io/get-started/chat/).
   
-  Bons estudos
+  Bons estudos!
